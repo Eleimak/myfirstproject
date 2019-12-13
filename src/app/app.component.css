@@ -1,0 +1,48 @@
+h2{
+    color: red;
+}
+
+p{
+    color: yellow;
+}
+
+span{
+    color: magenta;
+}
+
+.toolbar {
+    background-color: #738496;
+    color: rgb(14, 240, 14);
+}
+
+.card{
+    color: rgb(233, 121, 17);
+}
+
+.content{
+    background: royalblue;
+}
+
+footer{
+    color: yellow;
+}
+
+.h1Heder{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-bottom: 3px solid red;
+}
+ .h1Heder h1{
+   margin-top: 50px;
+ }
+
+ .route{
+   display: flex;
+   flex-direction: row;
+   justify-content: space-evenly;
+ }
+
+ button{
+   font-size: 30px;
+ }

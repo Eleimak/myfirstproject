@@ -1,0 +1,35 @@
+<div class="quaret">
+    <p>{{message}}</p>
+    <p>{{students}}</p>
+    <h2 *ngFor = "let student of students; let index = index; let first = first;
+    let last = last; let even = even; let odd = odd"[ngClass]="{first:first, last:last, even:even, odd:odd}">{{index + 1}} - {{student}}</h2>
+    <ul>
+      <li *ngFor="let student of students">{{student}}</li>
+    </ul>
+  <ul>
+    <li *ngFor="let student of students; let even = even">
+      {{student}}
+      <span *ngIf="even; else alternative">
+         - Angular
+      </span>
+      <ng-template #alternative>
+         - Goodbye
+      </ng-template>
+    </li>
+   </ul>
+</div>
+<div class="quaret">
+  <button (click)="eventHandler($event)">Click me!</button>
+</div>
+<div class="quaret">
+  <button (click)="switch()">{{titleButton}}</button>
+  <p *ngIf="isClicked">
+    Text TEXT text TEXT
+  </p>
+</div>
+<div class="quaret">
+<input type="text" [(ngModel)]="text">
+  <p>{{text | uppercase}}</p>
+</div>
+
+

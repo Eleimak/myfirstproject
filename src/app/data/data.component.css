@@ -1,0 +1,22 @@
+.ppp div:hover{
+    font-size: 300%;
+    color: chartreuse;
+    background-color: crimson;
+}
+.ppp{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: green;
+}
+
+.ppp div{
+    cursor: pointer;
+}
+.timer{
+  background-color: blue;
+  position: fixed;
+  top: 0;
+  color: red;
+  padding: 0 20px 0 20px;
+}

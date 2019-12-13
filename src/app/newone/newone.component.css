@@ -1,0 +1,32 @@
+.quaret{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+}
+.even{
+  background-color: yellow;
+}
+
+.odd{
+  background-color: blue;
+}
+
+.first{
+  color: aqua;
+}
+
+.last{
+  color: blueviolet;
+}
+button{
+  font-size: large;
+  padding: 10px;
+  background-color: yellow;
+  color: aqua;
+  cursor: pointer;
+}
+input{
+  padding: 10px;
+  font-size: 20px;
+}
