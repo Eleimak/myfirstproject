@@ -15,4 +15,12 @@ export class NewthirdComponent implements OnInit {
   ngOnInit() {
   }
 
+  search(){
+    this.response = this.service.search();
+    //console.log(this.service.search());
+    console.log("flag");
+    console.log(this.response);
+    console.log("No");
+  }
+
 }
