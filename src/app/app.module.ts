@@ -1,6 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -11,6 +10,8 @@ import { NewtwoComponent } from './newtwo/newtwo.component';
 import { NewthirdComponent } from './newthird/newthird.component';
 import { NewmainComponent } from './newmain/newmain.component';
 import { FailureComponent } from './failure/failure.component';
+import { MyFirstService } from './service/my-first.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -25,9 +26,10 @@ import { FailureComponent } from './failure/failure.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [MyFirstService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

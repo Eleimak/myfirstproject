@@ -3,3 +3,11 @@ div{
   flex-direction: column;
   align-items: center;
 }
+
+button{
+  font-size: large;
+  padding: 10px;
+  background-color: yellow;
+  color: aqua;
+  cursor: pointer;
+}

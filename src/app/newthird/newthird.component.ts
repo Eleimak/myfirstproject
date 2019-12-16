@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { MyFirstService } from '../service/my-first.service';
+
 
 @Component({
   selector: 'app-newthird',
@@ -6,8 +8,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./newthird.component.css']
 })
 export class NewthirdComponent implements OnInit {
+  response: any;
 
-  constructor() { }
+  constructor(private service: MyFirstService) { }
 
   ngOnInit() {
   }

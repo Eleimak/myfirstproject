@@ -1,1 +1,13 @@
-<div>newthird works!</div>
+<div>NewThird works!</div>
+<div>
+  <button (click)="service.search()">Click</button>
+
+  <div *ngIf="service.search() != null; else alternative">
+    <p>{{response.id}}</p>
+    <p>{{response.name}}</p>
+    <p>{{response.age}}</p>
+  </div>
+  <ng-template #alternative>
+    qqqqq
+  </ng-template>
+</div>

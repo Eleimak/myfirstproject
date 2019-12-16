@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {MyFirstService} from './service/my-first.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Elimak';
+  param: string;
+
+  constructor() {
+  }
 }
+
