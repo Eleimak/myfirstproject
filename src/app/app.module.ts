@@ -12,6 +12,7 @@ import { NewmainComponent } from './newmain/newmain.component';
 import { FailureComponent } from './failure/failure.component';
 import { MyFirstService } from './service/my-first.service';
 import { HttpClientModule } from '@angular/common/http';
+import { NewfourthComponent } from './newfourth/newfourth.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { HttpClientModule } from '@angular/common/http';
     NewthirdComponent,
     NewmainComponent,
     FailureComponent,
+    NewfourthComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,13 +1,42 @@
-<div>NewThird works!</div>
 <div>
-  <button (click)="service.search()">Click</button>
+  <h2>
+    NewThird works!
+  </h2>
+</div>
+<div class="container">
+  <table class="table table-sm table-bordered table-dark">
+    <thead>
+    <tr class="bg-success">
+      <th>ID</th>
+      <th>Name</th>
+      <th>Age</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let item of items">
+      <td>{{item.id}}</td>
+      <td>{{item.name}}</td>
+      <td>{{item.age}}</td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+<div>
+  <button (click)="search()">Click</button>
 
-  <div *ngIf="service.search() != null; else alternative">
-    <p>{{response.id}}</p>
-    <p>{{response.name}}</p>
-    <p>{{response.age}}</p>
+  <!--  <div *ngIf="response != null">-->
+  <!--    <p>{{response.id}}</p>-->
+  <!--    <p>{{response.name}}</p>-->
+  <!--    <p>{{response.age}}</p>-->
+  <!--  </div>-->
+  <div>
+    <pre>{{response | json}}</pre>
   </div>
-  <ng-template #alternative>
-    qqqqq
-  </ng-template>
+  <div>
+    <ul *ngFor="let item of response">
+      <li>{{item.id}}</li>
+      <li>{{item.name}}</li>
+      <li>{{item.age}}</li>
+    </ul>
+  </div>
 </div>
