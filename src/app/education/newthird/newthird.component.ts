@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MyFirstService } from '../service/my-first.service';
-import {HttpClient} from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 
 
 @Component({
@@ -36,7 +36,7 @@ export class NewthirdComponent implements OnInit {
   }
 
   searchList() {
-    this.http.get('http://localhost:8080/get/john')
+    this.http.get('http://localhost:8080/person/get/list')
       .subscribe((response) => {
         this.items = response;
       });
