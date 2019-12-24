@@ -17,6 +17,7 @@ import { NewfourthComponent } from './education/newfourth/newfourth.component';
 import { HomeComponent } from './workingAngular/component/home/home.component';
 import { PersonComponent } from './workingAngular/component/person/person.component';
 import { WorkerComponent } from './workingAngular/component/worker/worker.component';
+import { PersonService } from './workingAngular/services/person.service';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,7 @@ import { WorkerComponent } from './workingAngular/component/worker/worker.compon
     FormsModule,
     HttpClientModule
   ],
-  providers: [MyFirstService],
+  providers: [PersonService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
