@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import { PersonService } from '../../services/person.service';
+import { Person } from '../../model/person';
 
 @Component({
   selector: 'app-person',
@@ -13,10 +14,15 @@ export class PersonComponent implements OnInit {
   asc: boolean = true;
   isClicked = false;
   personPerPage = 5;
+  person: Person;
 
 
   constructor(private personService: PersonService) {
     //this.getAll();
+    this.person = new Person();
+    this.person.name = '';
+    this.person.dateOfBirth = '';
+    this.person.gender = true;
     this.getPage(1, this.personPerPage);
   }
 
@@ -34,6 +40,11 @@ export class PersonComponent implements OnInit {
     this.personService.getPage(from,amount).subscribe((response) => {
       this.items = response;
     });
+  }
+
+  getPageService(){
+    this.personPerPage += 5;
+    this.getPage(1,this.personPerPage);
   }
 
   Revers() {
@@ -56,5 +67,12 @@ export class PersonComponent implements OnInit {
 
   switch() {
     this.isClicked = !this.isClicked;
+  }
+
+  addPerson() {
+    this.personService.addPerson(this.person)
+      .subscribe(() => {
+        this.getAll();
+      });
   }
 }

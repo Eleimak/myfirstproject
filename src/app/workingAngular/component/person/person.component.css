@@ -1,0 +1,22 @@
+/*thead, tbody{*/
+/*  display: block;*/
+/*  width: 500px;*/
+/*}*/
+
+/*tbody{*/
+/*  width: 400px;*/
+/*  height: 100px;*/
+/*  overflow: scroll;*/
+/*}*/
+.tableScroll thead th{
+  position: sticky;
+  top: 0;
+  background-color: forestgreen;
+}
+
+.tableScroll{
+  height: 200px;
+  overflow: auto;
+}
+
+

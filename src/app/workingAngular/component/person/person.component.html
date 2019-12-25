@@ -2,6 +2,7 @@
   <input type="checkbox" [checked]="isClicked"(change)="isClicked = !isClicked"><span>Delete all</span>
   <input type="text">
   <button>Create</button>
+  <div class="tableScroll">
   <table class="table table-striped table-sm table-bordered table-dark">
     <thead>
     <tr class="bg-success">
@@ -25,8 +26,24 @@
       <ng-template #alternative>
         <td>female</td>
       </ng-template>
+
     </tr>
+
     </tbody>
   </table>
+  </div>
+    <button (click)="this.getPageService()">More</button>
+
+
+  <div>
+    <input type="text" [(ngModel)]="person.name" placeholder="Name"/>
+    <br />
+    <input type="date" [(ngModel)]="person.dateOfBirth"/>
+    <br />
+    <input type="boolean" [(ngModel)]="person.gender" placeholder="Gender"/>
+    <br />
+    <button (click)="this.addPerson()">Add Person</button>
+    <br /><br />
+  </div>
 </div>
 
