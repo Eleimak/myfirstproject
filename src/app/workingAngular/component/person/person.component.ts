@@ -75,4 +75,15 @@ export class PersonComponent implements OnInit {
         this.getAll();
       });
   }
+
+  update(item: any){
+    this.person = item;
+  }
+
+  scrollAuto(){
+    if (document.getElementById('scrollTable').scrollHeight-document.getElementById('scrollTable').scrollTop == document.getElementById('scrollTable').offsetHeight) {
+      this.getPageService();
+    }
+  }
 }
+
